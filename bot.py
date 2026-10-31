@@ -8,7 +8,7 @@ import database
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_ID = int(os.getenv("ADMIN_ID"))
+ADMIN_ID = int(os.getenv("ADMIN_ID", "8613713036"))
 
 QTY, UPI, CONFIRM, SUPPORT_MSG = range(4)
 database.init_db()
@@ -135,6 +135,5 @@ def main():
     app.run_polling()
 
 if __name__ == "__main__":
-    main()
-0
+    main()0
 
